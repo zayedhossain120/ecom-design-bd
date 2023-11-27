@@ -4,18 +4,19 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="signup.css">
     <title>Document</title>
   </head>
   <body>
-    <section class="min-h-screen flex items-center justify-center">
+    <section class="min-h-screen flex items-center justify-center box-container">
       <!-- login container -->
-      <div class="bg-gray-100 rounded-2xl shadow p-10">
+      <div class="bg-white rounded-2xl shadow p-10">
         <!-- form -->
         <div class="flex justify-center items-center">
           <img class="justify-center" src="images/logo.svg" width="80px" />
         </div>
         <h2 class="font-bold text-2xl text-[#002D74] text-center">Sopne</h2>
-        <p class="text-xs mt-1 mb-2 text-[#002D74] text-center">
+        <p class="text-base mt-1 mb-2 text-center text-black/50">
           Best online Ecommerce website for you
         </p>
 
@@ -70,25 +71,27 @@
           </button>
         </div>
 
-        <div class="my-4 flex justify-between items-center text-gray-400">
+        <div class="my-4 flex justify-between items-center text-gray-400 gap-2">
           <hr class="border-dashed border-gray-400 w-40" />
-          <p class="text-center text-sm">OR</p>
+          <p class="text-center text-sm">Or</p>
           <hr class="border-dashed border-gray-400 w-40" />
         </div>
 
         <form action="" class="flex flex-col">
           <input
-            class="p-2 rounded border mb-4 border border-gray-300"
+            class="p-2 mb-4 rounded border w-full border border-black/25 placeholder-black/50 focus:ring-blue-500 focus:border-blue-500 outline-none"
             type="email"
             name="email"
             placeholder="Type Your Email"
+            required
           />
           <div class="relative mb-4">
             <input
-              class="p-2 rounded border w-full border border-gray-300"
+              class="p-2 rounded border w-full border border-black/25 placeholder-black/50 focus:ring-blue-500 focus:border-blue-500 outline-none"
               type="password"
               name="password"
               placeholder="Type Your Password"
+              required
             />
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -129,8 +132,8 @@
         <div
           class="text-xs flex items-center text-[#002D74] gap-1 justify-center"
         >
-          <p>Don't have an account?</p>
-          <button class="font-bold rounded-xl duration-300 text-[#5A8BF2]">
+          <p class="text-base text-black/50">Don't have an account?</p>
+          <button class="font-bold rounded-xl duration-300 text-[#5A8BF2] text-base">
             Register
           </button>
         </div>
