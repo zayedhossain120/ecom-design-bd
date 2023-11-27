@@ -4,13 +4,15 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="stylesheet" href="signup.css">
-    <title>Document</title>
+    <link rel="stylesheet" href="signup.css" />
+    <title>Login</title>
   </head>
   <body>
-    <section class="min-h-screen flex items-center justify-center box-container">
+    <section
+      class="min-h-screen flex items-center justify-center bg-[url('/images/Background.svg')]"
+    >
       <!-- login container -->
-      <div class="bg-white rounded-2xl shadow p-10 max-w-full">
+      <div class="bg-white rounded-2xl px-12 pb-10 pt-7 max-w-full drop-shadow-2xl">
         <!-- form -->
         <div class="flex justify-center items-center">
           <img class="justify-center" src="images/logo.svg" width="80px" />
@@ -22,7 +24,7 @@
 
         <div class="flex justify-center gap-3">
           <button
-            class="bg-white border py-2 px-5 w-50 rounded-xl mt-5 flex justify-center items-center text-sm hover:scale-105 duration-300 text-[#002D74]"
+            class="bg-white border py-2 px-5 w-50 rounded-xl mt-5 flex justify-center items-center text-sm text-[#002D74]"
           >
             <svg
               class="mr-3"
@@ -50,7 +52,7 @@
             Google
           </button>
           <button
-            class="bg-white border py-2 px-5 w-50 rounded-xl mt-5 flex justify-center items-center text-sm hover:scale-105 duration-300 text-[#002D74]"
+            class="bg-white border py-2 px-5 w-50 rounded-xl mt-5 flex justify-center items-center text-sm text-[#002D74]"
           >
             <svg
               class="mr-3"
@@ -133,7 +135,9 @@
           class="text-xs flex items-center text-[#002D74] gap-1 justify-center"
         >
           <p class="text-base text-black/50">Don't have an account?</p>
-          <button class="font-bold rounded-xl duration-300 text-[#5A8BF2] text-base">
+          <button
+            class="font-bold rounded-xl duration-300 text-[#5A8BF2] text-base"
+          >
             Register
           </button>
         </div>
