@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="signup.css" />
+    <title>Verify</title>
+  </head>
+  <body>
+    <section
+      class="min-h-screen flex items-center justify-center bg-[url('/images/Background.svg')]"
+    >
+      <!-- login container -->
+      <div
+        class="bg-white rounded-2xl px-12 pb-10 pt-7 max-w-full drop-shadow-2xl flex flex-col items-center justify-between"
+      >
+        <!-- form -->
+        <img src="images/verify-icon.svg" />
+        <h2>Verify your email address</h2>
+        <p class="text-center text-xs	">
+          To verify your email address enter the verification code here.
+        </p>
+        <div
+          id="otpNumberCounter"
+          class="flex flex-row justify-center text-center px-2 my-8"
+        >
+          <input
+            class="m-2 border h-10 w-10 text-center form-control rounded"
+            type="text"
+            id="first"
+            maxlength="1"
+          />
+          <input
+            class="m-2 border h-10 w-10 text-center form-control rounded"
+            type="text"
+            id="second"
+            maxlength="1"
+          />
+          <input
+            class="m-2 border h-10 w-10 text-center form-control rounded"
+            type="text"
+            id="third"
+            maxlength="1"
+          />
+          <input
+            class="m-2 border h-10 w-10 text-center form-control rounded"
+            type="text"
+            id="fourth"
+            maxlength="1"
+          />
+        </div>
+        <button
+          role="button"
+          class="relative mb-10 px-32 py-3 overflow-hidden font-medium text-black bg-white border border-blue-100 rounded-lg shadow-inner group"
+        >
+          <span
+            class="absolute top-0 left-0 w-0 h-0 transition-all duration-200 border-t-2 border-gray-600 group-hover:w-full ease"
+          ></span>
+          <span
+            class="absolute bottom-0 right-0 w-0 h-0 transition-all duration-200 border-b-2 border-gray-600 group-hover:w-full ease"
+          ></span>
+          <span
+            class="absolute top-0 left-0 w-full h-0 transition-all duration-300 delay-200 bg-gray-600 group-hover:h-full ease"
+          ></span>
+          <span
+            class="absolute bottom-0 left-0 w-full h-0 transition-all duration-300 delay-200 bg-gray-600 group-hover:h-full ease"
+          ></span>
+          <span
+            class="absolute inset-0 w-full h-full duration-300 delay-300 bg-gray-900 opacity-0 group-hover:opacity-100"
+          ></span>
+          <span
+            class="relative transition-colors duration-300 delay-200 group-hover:text-white ease"
+            >Verify Email</span
+          >
+        </button>
+        <div
+          class="text-xs flex items-center text-[#002D74] gap-1 justify-center"
+        >
+          <p class="text-base">Code didn't get?</p>
+          <button
+            class="font-bold rounded-xl duration-300 text-[#5A8BF2] text-base"
+          >
+            Resend
+          </button>
+        </div>
+      </div>
+    </section>
+
+
+
+
+
+    <script src="verify.js"></script>
+  </body>
+</html>
