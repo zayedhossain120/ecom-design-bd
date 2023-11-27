@@ -1,5 +1,10 @@
-.box-container{
-    background-image: url(images/Background.png);
-    background-size: cover;
-    background-position: center;
+.box-container {
+  background-image: url(images/Background.png);
+  background-size: cover;
+  background-position: center;
+}
+@media screen and (max-width: 600px) {
+  /* .box-container-2 {
+    width: 100%;
+  } */
 }
