@@ -11,7 +11,7 @@
       class="min-h-screen flex items-center justify-center bg-[url('/images/Background.svg')]"
     >
       <!-- login container -->
-      <div class="bg-white rounded-2xl p-12 drop-shadow-2xl max-w-full">
+      <div class="bg-white rounded-2xl p-12 drop-shadow-2xl max-w-full box-container">
         <!-- form -->
         <h2 class="font-bold text-2xl text-[#000] text-center">Sign Up</h2>
         <p class="text-base mt-1 mb-5 text-black/50 text-center">
@@ -138,29 +138,23 @@
           </div>
           <a
           href="http://127.0.0.1:5500/verify.html"
-            role="button"
-            class="relative w-full py-3 overflow-hidden text-center font-medium text-black bg-white border border-blue-100 rounded-lg shadow-inner group"
-          >
-            <span
-              class="absolute top-0 left-0 w-0 h-0 transition-all duration-200 border-t-2 border-gray-600 group-hover:w-full ease"
-            ></span>
-            <span
-              class="absolute bottom-0 right-0 w-0 h-0 transition-all duration-200 border-b-2 border-gray-600 group-hover:w-full ease"
-            ></span>
-            <span
-              class="absolute top-0 left-0 w-full h-0 transition-all duration-300 delay-100 bg-gray-600 group-hover:h-full ease"
-            ></span>
-            <span
-              class="absolute bottom-0 left-0 w-full h-0 transition-all duration-300 delay-100 bg-gray-100 group-hover:h-full ease"
-            ></span>
-            <span
-              class="absolute inset-0 w-full h-full duration-300 delay-300 bg-[#5A8BF2] opacity-0 group-hover:opacity-100"
-            ></span>
-            <span
-              class="relative transition-colors duration-300 delay-200 group-hover:text-white ease"
-              >Create Account</span
-            >
-          </a>
+          role="button"
+          class="relative w-full py-3 text-center overflow-hidden font-medium text-black bg-white border border-blue-100 rounded-lg shadow-inner group focus:bg-blue-500 focus:text-white"
+        >
+          <span
+            class="ease absolute left-0 top-0 h-0 w-0 border-t-2 border-blue-500 transition-all duration-200 group-hover:w-full"
+          ></span>
+          <span
+            class="ease absolute right-0 top-0 h-0 w-0 border-r-2 border-blue-500 transition-all duration-200 group-hover:h-full"
+          ></span>
+          <span
+            class="ease absolute bottom-0 right-0 h-0 w-0 border-b-2 border-blue-500 transition-all duration-200 group-hover:w-full"
+          ></span>
+          <span
+            class="ease absolute bottom-0 left-0 h-0 w-0 border-l-2 border-blue-500 transition-all duration-200 group-hover:h-full"
+          ></span>
+          Create Account
+        </a>
         </form>
         <div class="flex justify-between items-center text-gray-400 gap-2 my-7">
           <hr class="border-dashed border-gray-400 w-60" />
