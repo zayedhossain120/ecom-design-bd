@@ -11,7 +11,7 @@
       class="min-h-screen flex items-center justify-center bg-[url('/images/Background.svg')]"
     >
       <!-- login container -->
-      <div class="bg-white rounded-2xl p-12	drop-shadow-2xl max-w-full">
+      <div class="bg-white rounded-2xl p-12 drop-shadow-2xl max-w-full">
         <!-- form -->
         <h2 class="font-bold text-2xl text-[#000] text-center">Sign Up</h2>
         <p class="text-base mt-1 mb-5 text-black/50 text-center">
@@ -41,71 +41,126 @@
               name="password"
               placeholder="Type Your Password"
               required
+              id="typeyourpassword"
             />
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="16"
-              height="16"
-              fill="gray"
-              class="bi bi-eye absolute top-3 right-3"
-              viewBox="0 0 16 16"
-            >
-              <path
-                d="M16 8s-3-5.5-8-5.5S0 8 0 8s3 5.5 8 5.5S16 8 16 8zM1.173 8a13.133 13.133 0 0 1 1.66-2.043C4.12 4.668 5.88 3.5 8 3.5c2.12 0 3.879 1.168 5.168 2.457A13.133 13.133 0 0 1 14.828 8c-.058.087-.122.183-.195.288-.335.48-.83 1.12-1.465 1.755C11.879 11.332 10.119 12.5 8 12.5c-2.12 0-3.879-1.168-5.168-2.457A13.134 13.134 0 0 1 1.172 8z"
-              />
-              <path
-                d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5zM4.5 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0z"
-              />
-            </svg>
+            <span onclick="handlePasswordOne()">
+              <svg
+                id="eyeon"
+                xmlns="http://www.w3.org/2000/svg"
+                class="icon icon-tabler icon-tabler-eye absolute top-3 right-3"
+                width="16"
+                height="24"
+                viewBox="0 0 24 24"
+                stroke-width="2"
+                stroke="grey"
+                fill="none"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                <path d="M10 12a2 2 0 1 0 4 0a2 2 0 0 0 -4 0" />
+                <path
+                  d="M21 12c-2.4 4 -5.4 6 -9 6c-3.6 0 -6.6 -2 -9 -6c2.4 -4 5.4 -6 9 -6c3.6 0 6.6 2 9 6"
+                />
+              </svg>
+              <svg
+                id="eyeoff"
+                xmlns="http://www.w3.org/2000/svg"
+                class="icon icon-tabler icon-tabler-eye-off absolute top-3 right-3"
+                width="16"
+                height="24"
+                viewBox="0 0 24 24"
+                stroke-width="2"
+                stroke="grey"
+                fill="none"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                <path d="M10.585 10.587a2 2 0 0 0 2.829 2.828" />
+                <path
+                  d="M16.681 16.673a8.717 8.717 0 0 1 -4.681 1.327c-3.6 0 -6.6 -2 -9 -6c1.272 -2.12 2.712 -3.678 4.32 -4.674m2.86 -1.146a9.055 9.055 0 0 1 1.82 -.18c3.6 0 6.6 2 9 6c-.666 1.11 -1.379 2.067 -2.138 2.87"
+                />
+                <path d="M3 3l18 18" />
+              </svg>
+            </span>
           </div>
           <div class="relative mb-4">
             <input
               class="p-2 rounded border w-full border border-black/25 placeholder-black/50 focus:ring-blue-500 focus:border-blue-500 outline-none"
               type="password"
               name="password"
-              placeholder="Retype Password"
+              placeholder="Retype Your Password"
               required
+              id="confirm-password"
             />
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="16"
-              height="16"
-              fill="gray"
-              class="bi bi-eye absolute top-3 right-3"
-              viewBox="0 0 16 16"
-            >
-              <path
-                d="M16 8s-3-5.5-8-5.5S0 8 0 8s3 5.5 8 5.5S16 8 16 8zM1.173 8a13.133 13.133 0 0 1 1.66-2.043C4.12 4.668 5.88 3.5 8 3.5c2.12 0 3.879 1.168 5.168 2.457A13.133 13.133 0 0 1 14.828 8c-.058.087-.122.183-.195.288-.335.48-.83 1.12-1.465 1.755C11.879 11.332 10.119 12.5 8 12.5c-2.12 0-3.879-1.168-5.168-2.457A13.134 13.134 0 0 1 1.172 8z"
-              />
-              <path
-                d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5zM4.5 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0z"
-              />
-            </svg>
+            <span onclick="handlePasswordTwo()">
+              <svg
+                id="confirmeyeon"
+                xmlns="http://www.w3.org/2000/svg"
+                class="icon icon-tabler icon-tabler-eye absolute top-2.5 right-3"
+                width="16"
+                height="24"
+                viewBox="0 0 24 24"
+                stroke-width="2"
+                stroke="grey"
+                fill="none"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                <path d="M10 12a2 2 0 1 0 4 0a2 2 0 0 0 -4 0" />
+                <path
+                  d="M21 12c-2.4 4 -5.4 6 -9 6c-3.6 0 -6.6 -2 -9 -6c2.4 -4 5.4 -6 9 -6c3.6 0 6.6 2 9 6"
+                />
+              </svg>
+              <svg
+                id="confirmeyeoff"
+                xmlns="http://www.w3.org/2000/svg"
+                class="icon icon-tabler icon-tabler-eye-off absolute top-2.5 right-3"
+                width="16"
+                height="24"
+                viewBox="0 0 24 24"
+                stroke-width="2"
+                stroke="grey"
+                fill="none"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                <path d="M10.585 10.587a2 2 0 0 0 2.829 2.828" />
+                <path
+                  d="M16.681 16.673a8.717 8.717 0 0 1 -4.681 1.327c-3.6 0 -6.6 -2 -9 -6c1.272 -2.12 2.712 -3.678 4.32 -4.674m2.86 -1.146a9.055 9.055 0 0 1 1.82 -.18c3.6 0 6.6 2 9 6c-.666 1.11 -1.379 2.067 -2.138 2.87"
+                />
+                <path d="M3 3l18 18" />
+              </svg>
+            </span>
           </div>
-          <button
-          role="button"
-          class="relative w-full py-3 overflow-hidden font-medium text-black bg-white border border-blue-100 rounded-lg shadow-inner group"
-        >
-          <span
-            class="absolute top-0 left-0 w-0 h-0 transition-all duration-200 border-t-2 border-gray-600 group-hover:w-full ease"
-          ></span>
-          <span
-            class="absolute bottom-0 right-0 w-0 h-0 transition-all duration-200 border-b-2 border-gray-600 group-hover:w-full ease"
-          ></span>
-          <span
-            class="absolute top-0 left-0 w-full h-0 transition-all duration-300 delay-200 bg-gray-600 group-hover:h-full ease"
-          ></span>
-          <span
-            class="absolute bottom-0 left-0 w-full h-0 transition-all duration-300 delay-200 bg-gray-100 group-hover:h-full ease"
-          ></span>
-          <span
-            class="absolute inset-0 w-full h-full duration-300 delay-300 bg-[#5A8BF2] opacity-0 group-hover:opacity-100"
-          ></span>
-          <span
-            class="relative transition-colors duration-300 delay-200 group-hover:text-white ease"
-            >Verify Email</span
+          <a
+          href="http://127.0.0.1:5500/verify.html"
+            role="button"
+            class="relative w-full py-3 overflow-hidden text-center font-medium text-black bg-white border border-blue-100 rounded-lg shadow-inner group"
           >
-        </button>
+            <span
+              class="absolute top-0 left-0 w-0 h-0 transition-all duration-200 border-t-2 border-gray-600 group-hover:w-full ease"
+            ></span>
+            <span
+              class="absolute bottom-0 right-0 w-0 h-0 transition-all duration-200 border-b-2 border-gray-600 group-hover:w-full ease"
+            ></span>
+            <span
+              class="absolute top-0 left-0 w-full h-0 transition-all duration-300 delay-100 bg-gray-600 group-hover:h-full ease"
+            ></span>
+            <span
+              class="absolute bottom-0 left-0 w-full h-0 transition-all duration-300 delay-100 bg-gray-100 group-hover:h-full ease"
+            ></span>
+            <span
+              class="absolute inset-0 w-full h-full duration-300 delay-300 bg-[#5A8BF2] opacity-0 group-hover:opacity-100"
+            ></span>
+            <span
+              class="relative transition-colors duration-300 delay-200 group-hover:text-white ease"
+              >Create Account</span
+            >
+          </a>
         </form>
         <div class="flex justify-between items-center text-gray-400 gap-2 my-7">
           <hr class="border-dashed border-gray-400 w-60" />
@@ -114,28 +169,66 @@
         </div>
 
         <div class="flex justify-center gap-3 mb-5">
-          <button
-            class="bg-white border py-2 px-5 w-50 rounded-xl flex justify-center items-center gap-2 text-sm"
-          >
-          <img src="images/google.svg" alt="Google Logo">
-            Google
-          </button>
-          <button
+          <a
+          href="https://www.google.com/"
             class="bg-white border py-2 px-5 w-50 rounded-xl flex justify-center items-center gap-2 text-sm hover:border-blue-500 hover:drop-shadow-[0_35px_35px_rgba(0,0,0,0.25)]"
           >
-           <img src="images/facebook.svg" alt="Facebook Logo"/>
+            <img src="images/google.svg" alt="Google Logo" />
+            Google
+          </a>
+          <a
+          href="https://www.facebook.com/"
+            class="bg-white border py-2 px-5 w-50 rounded-xl flex justify-center items-center gap-2 text-sm hover:border-blue-500 hover:drop-shadow-[0_35px_35px_rgba(0,0,0,0.25)]"
+          >
+            <img src="images/facebook.svg" alt="Facebook Logo" />
             Facebook
-          </button>
+          </a>
         </div>
         <div
           class="text-xs flex items-center text-[#002D74] gap-1 justify-center"
         >
           <p class="text-base">You have an account?</p>
-          <button class="font-bold rounded-xl duration-300 text-[#5A8BF2] text-base">
+          <a
+            href="http://127.0.0.1:5500/login.html"
+            class="font-bold rounded-xl duration-300 text-[#5A8BF2] text-base"
+          >
             Login
-          </button>
+          </a>
         </div>
       </div>
     </section>
+
+    <script>
+      function handlePasswordOne() {
+        let passwordInput = document.getElementById("typeyourpassword");
+        let eyeOn = document.getElementById("eyeon");
+        let eyeOff = document.getElementById("eyeoff");
+
+        if (passwordInput.type === "password") {
+          passwordInput.type = "text";
+          eyeOn.style.display = "block";
+          eyeOff.style.display = "none";
+        } else {
+          passwordInput.type = "password";
+          eyeOn.style.display = "none";
+          eyeOff.style.display = "block";
+        }
+      }
+      function handlePasswordTwo() {
+        let confirmPasswordInput = document.getElementById("confirm-password");
+        let confirmEyeOn = document.getElementById("confirmeyeon");
+        let confirmEyeOff = document.getElementById("confirmeyeoff");
+
+        if (confirmPasswordInput.type === "password") {
+          confirmPasswordInput.type = "text";
+          confirmEyeOn.style.display = "block";
+          confirmEyeOff.style.display = "none";
+        } else {
+          confirmPasswordInput.type = "password";
+          confirmEyeOn.style.display = "none";
+          confirmEyeOff.style.display = "block";
+        }
+      }
+    </script>
   </body>
 </html>
