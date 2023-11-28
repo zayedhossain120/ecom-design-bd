@@ -13,9 +13,8 @@
     >
       <!-- login container -->
       <div
-        class="bg-white rounded-2xl px-12 pb-10 pt-7 max-w-full drop-shadow-2xl h-fit"
+        class="bg-white rounded-2xl px-12 pb-10 pt-7 max-w-full drop-shadow-2xl"
       >
-        <!-- form -->
         <div class="flex justify-center items-center">
           <img class="justify-center" src="images/logo.svg" width="80px" />
         </div>
@@ -47,6 +46,7 @@
           <hr class="border-dashed border-black opacity-25 w-40" />
         </div>
 
+        <!-- form -->
         <form action="" class="flex flex-col">
           <input
             class="p-2 mb-4 rounded border w-full border border-black/25 placeholder-black/50 focus:ring-blue-500 focus:border-blue-500 outline-none hover:border-blue-500"
@@ -57,7 +57,7 @@
           />
           <div class="relative">
             <input
-              class="p-2 rounded border w-full border border-black/25 placeholder-black/50 focus:ring-blue-500 focus:border-blue-500 outline-none mb-0.5"
+              class="p-2 rounded border w-full border border-black/25 placeholder-black/50 focus:ring-blue-500 focus:border-blue-500 outline-none mb-0.5 hover:border-blue-500"
               type="password"
               name="password"
               placeholder="Type Your Password"
@@ -70,7 +70,7 @@
                 xmlns="http://www.w3.org/2000/svg"
                 class="icon icon-tabler icon-tabler-eye absolute top-3 right-3"
                 width="16"
-                height="24"
+                height="16"
                 viewBox="0 0 24 24"
                 stroke-width="2"
                 stroke="grey"
@@ -89,7 +89,7 @@
                 xmlns="http://www.w3.org/2000/svg"
                 class="icon icon-tabler icon-tabler-eye-off absolute top-3 right-3"
                 width="16"
-                height="24"
+                height="16"
                 viewBox="0 0 24 24"
                 stroke-width="2"
                 stroke="grey"
@@ -105,9 +105,8 @@
                 <path d="M3 3l18 18" />
               </svg>
             </span>
-            <span
-            class="flex justify-end"  
-            ><a href="#" class="text-sm text-right text-black opacity-50"
+            <span class="flex justify-end"
+              ><a href="#" class="text-sm text-right text-black opacity-50"
                 >Forget Password</a
               ></span
             >
@@ -131,21 +130,19 @@
             ></span>
             Login
           </a>
-          <div class="flex items-center gap-3 mb-5 justify-center">
-            <input
-              id="default-checkbox"
-              type="checkbox"
-              value=""
-              class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:bg-gray-700 dark:border-gray-600 outline-none"
-            />
-            <label for="default-checkbox" class="font-sm text-black opacity-50"
-              >Remember me for 30 days</label
-            >
-          </div>
         </form>
-        <div
-          class="flex items-center gap-1 justify-center"
-        >
+        <div class="flex items-center gap-3 mb-5 justify-center">
+          <input
+            id="default-checkbox"
+            type="checkbox"
+            value=""
+            class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:bg-gray-700 dark:border-gray-600 outline-none"
+          />
+          <label for="default-checkbox" class="font-sm text-black opacity-50"
+            >Remember me for 30 days</label
+          >
+        </div>
+        <div class="flex items-center gap-1 justify-center">
           <p class="text-base text-black opacity-50">Don't have an account?</p>
           <a
             href="http://127.0.0.1:5500/signup.html"
