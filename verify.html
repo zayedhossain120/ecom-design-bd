@@ -4,7 +4,6 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="signup.css" />
     <title>Verify</title>
   </head>
   <body>
@@ -17,8 +16,8 @@
       >
         <!-- form -->
         <img src="images/verify-icon.svg" />
-        <h2>Verify your email address</h2>
-        <p class="text-center text-xs">
+        <h2 class="text-[22px]">Verify your email address</h2>
+        <p class="text-center text-black opacity-50 text-[16px]">
           To verify your email address enter the verification code here.
         </p>
         <div
@@ -26,25 +25,25 @@
           class="flex flex-row justify-center text-center px-2 my-8"
         >
           <input
-            class="m-2 border h-16 w-14 text-center form-control rounded focus:border-blue-500"
+            class="text-[#5A8BF2] text-[40px] font-[600] m-2 border h-16 w-14 text-center form-control rounded focus:border-blue-500"
             type="text"
             id="first"
             maxlength="1"
           />
           <input
-            class="m-2 border h-16 w-14 text-center form-control rounded focus:ring-blue-500 focus:border-blue-500"
+            class="text-[#5A8BF2] text-[40px] font-[600] m-2 border h-16 w-14 text-center form-control rounded focus:ring-blue-500 focus:border-blue-500"
             type="text"
             id="second"
             maxlength="1"
           />
           <input
-            class="m-2 border h-16 w-14 text-center form-control rounded"
+            class="text-[#5A8BF2] text-[40px] font-[600] m-2 border h-16 w-14 text-center form-control rounded"
             type="text"
             id="third"
             maxlength="1"
           />
           <input
-            class="m-2 border h-16 w-14 text-center form-control rounded"
+            class="text-[#5A8BF2] text-[40px] font-[600] m-2 border h-16 w-14 text-center form-control rounded"
             type="text"
             id="fourth"
             maxlength="1"
@@ -72,9 +71,10 @@
         <div
           class="text-xs flex items-center text-[#002D74] gap-1 justify-center"
         >
-          <p class="text-base">Code didn't get?</p>
+          <p id="countdownText" class="text-[18px] text-black opacity-50">Code didn't get?</p>
           <button
-            class="font-bold rounded-xl duration-300 text-[#5A8BF2] text-base"
+          id="resendButton" onclick="countdownTimer.reset(); countdownTimer.start();"
+            class="font-bold rounded-xl duration-300 text-[#5A8BF2] text-[18px]"
           >
             Resend
           </button>
@@ -97,7 +97,7 @@
                     if (i !== 0) inputs[i - 1]?.focus();
                 } else if (
                     !isLastInput &&
-                    (/[0-9]/.test(event.key)) //Problem: User can't put there capital letter
+                    (/[0-9]/.test(event.key)) //Problem: User can't put there capital letter but it's working there shit!!
                 ) {
                     inputs[i].value = isLastInput
                         ? ""
@@ -112,7 +112,37 @@
     handleOTPInput();
 });
 
+const countdownTimer = {
+      seconds: 15,
+      countdown: null,
 
+      start() {
+        this.countdown = setInterval(() => {
+          this.updateText(`Resend in ${this.seconds}`);
+          if (this.seconds-- <= 0) this.reset();
+        }, 1000);
+        this.disableButton();
+      },
+
+      reset() {
+        this.enableButton();  // Ensure the button is enabled
+        this.updateText("Code didn't get?");
+        clearInterval(this.countdown);
+        this.seconds = 15;
+      },
+
+      disableButton() {
+        document.getElementById('resendButton').innerText = "";
+      },
+
+      enableButton() {
+        document.getElementById('resendButton').innerText = "Resend";
+      },
+
+      updateText(text) {
+        document.getElementById('countdownText').innerText = text;
+      },
+    };
     </script>
   </body>
 </html>

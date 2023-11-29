@@ -4,45 +4,47 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://cdn.tailwindcss.com"></script>
-    <title>Sign Up</title>
+    <title>Document</title>
   </head>
   <body>
     <section
       class="min-h-screen flex items-center justify-center bg-[url('/images/Background.svg')]"
     >
-      <!-- login container -->
-      <div class="bg-white rounded-2xl p-12 drop-shadow-2xl	max-w-full">
-        <h2 class="font-bold text-2xl text-[#000] text-center">Sign Up</h2>
-        <p class="text-base mt-1 mb-5 text-black/50 text-center">
-          Lorem Ipsum is simply dummy text of the printing and  typesetting
-          industry.
+      <!-- //!signup container -->
+      <div
+        class="bg-white rounded-2xl px-12 pb-10 pt-7 max-w-full max-h-screen drop-shadow-2xl"
+      >
+        <h2 class="font-bold text-[24px] text-[#000] text-center">Sign Up</h2>
+        <p class="text-center text-[16px] mt-[15px] text-black opacity-50">
+          Lorem Ipsum is simply dummy text of the printing and <br>
         </p>
-        <!-- form -->
-        <form action="" class="flex flex-col">
+        <form class="flex flex-col my-[30px]">
           <input
-            class="p-2 rounded border w-full mb-4 border border-black/25 placeholder-black/50 focus:ring-blue-500 focus:border-blue-500 outline-none hover:border-blue-500"
-            type="name"
-            name="name"
+            class="p-2 mb-[15px] rounded border w-full border border-black/20 placeholder-black/50 focus:ring-blue-500 focus:border-blue-500 outline-none hover:border-blue-500"
+            type="email"
+            name="email"
             placeholder="Your Name"
             required
           />
           <input
-            class="p-2 rounded border w-full mb-4 border border-black/25 placeholder-black/50 focus:ring-blue-500 focus:border-blue-500 outline-none hover:border-blue-500"
+            class="p-2 mb-[15px] rounded border w-full border border-black/20 placeholder-black/50 focus:ring-blue-500 focus:border-blue-500 outline-none hover:border-blue-500"
             type="email"
             name="email"
-            placeholder="Type Your Email"
+            placeholder="Your Email"
             required
           />
-          <div class="relative mb-4">
+          <div class="relative mb-[15px]">
             <input
-              class="p-2 rounded border w-full border border-black/25 placeholder-black/50 focus:ring-blue-500 focus:border-blue-500 outline-none hover:border-blue-500"
+              class="p-2 rounded border w-full border border-black/20 placeholder-black/50 focus:ring-blue-500 focus:border-blue-500 outline-none hover:border-blue-500"
               type="password"
               name="password"
-              placeholder="Type Your Password"
+              placeholder="Password"
               required
               id="typeyourpassword"
             />
-            <span onclick="handlePasswordOne()">
+            <span
+              onclick="handlePassword('typeyourpassword', 'eyeon', 'eyeoff')"
+            >
               <svg
                 id="eyeon"
                 xmlns="http://www.w3.org/2000/svg"
@@ -84,16 +86,18 @@
               </svg>
             </span>
           </div>
-          <div class="relative mb-4">
+          <div class="relative mb-[15px]">
             <input
-              class="p-2 rounded border w-full border border-black/25 placeholder-black/50 focus:ring-blue-500 focus:border-blue-500 outline-none hover:border-blue-500"
+              class="p-2 rounded border w-full border border-black/20 placeholder-black/50 focus:ring-blue-500 focus:border-blue-500 outline-none hover:border-blue-500"
               type="password"
               name="password"
-              placeholder="Retype Your Password"
+              placeholder="Confirm Password"
               required
               id="confirm-password"
             />
-            <span onclick="handlePasswordTwo()">
+            <span
+              onclick="handlePassword('confirm-password', 'confirmeyeon', 'confirmeyeoff')"
+            >
               <svg
                 id="confirmeyeon"
                 xmlns="http://www.w3.org/2000/svg"
@@ -136,42 +140,45 @@
             </span>
           </div>
           <a
-          href="http://127.0.0.1:5500/verify.html"
-          role="button"
-          class="relative w-full py-3 text-center overflow-hidden font-medium text-black bg-white border border-blue-100 rounded-lg shadow-inner group focus:bg-blue-500 focus:text-white"
-        >
-          <span
-            class="ease absolute left-0 top-0 h-0 w-0 border-t-2 border-blue-500 transition-all duration-200 group-hover:w-full"
-          ></span>
-          <span
-            class="ease absolute right-0 top-0 h-0 w-0 border-r-2 border-blue-500 transition-all duration-200 group-hover:h-full"
-          ></span>
-          <span
-            class="ease absolute bottom-0 right-0 h-0 w-0 border-b-2 border-blue-500 transition-all duration-200 group-hover:w-full"
-          ></span>
-          <span
-            class="ease absolute bottom-0 left-0 h-0 w-0 border-l-2 border-blue-500 transition-all duration-200 group-hover:h-full"
-          ></span>
-          Create Account
-        </a>
+            href="http://127.0.0.1:5500/verify.html"
+            role="button"
+            class="relative w-full py-3 text-center overflow-hidden font-medium text-black bg-white border border-blue-100 rounded-lg shadow-inner group focus:bg-blue-500 focus:text-white"
+          >
+            <span
+              class="ease absolute left-0 top-0 h-0 w-0 border-t-2 border-blue-500 transition-all duration-200 group-hover:w-full"
+            ></span>
+            <span
+              class="ease absolute right-0 top-0 h-0 w-0 border-r-2 border-blue-500 transition-all duration-200 group-hover:h-full"
+            ></span>
+            <span
+              class="ease absolute bottom-0 right-0 h-0 w-0 border-b-2 border-blue-500 transition-all duration-200 group-hover:w-full"
+            ></span>
+            <span
+              class="ease absolute bottom-0 left-0 h-0 w-0 border-l-2 border-blue-500 transition-all duration-200 group-hover:h-full"
+            ></span>
+            Create Account
+          </a>
         </form>
-        <div class="flex justify-between items-center text-gray-400 gap-2 my-7">
-          <hr class="border-dashed border-gray-400 w-60" />
-          <p class="text-center text-sm">Or</p>
-          <hr class="border-dashed border-gray-400 w-60" />
+        <!-- //!form end -->
+        <div
+          class="flex justify-between items-center text-gray-400 gap-2 mb-[30px]"
+        >
+          <hr class="border-dashed border-black opacity-20 w-full" />
+          <p class="text-center text-sm text-black opacity-60">Or</p>
+          <hr class="border-dashed border-black opacity-20 w-full" />
         </div>
-
-        <div class="flex justify-center gap-3 mb-5">
+        <!-- //*social button -->
+        <div class="flex justify-center gap-3 mb-[25px]">
           <a
-          href="https://www.google.com/"
-            class="bg-white border py-2 px-5 w-50 rounded-xl flex justify-center items-center gap-2 text-sm hover:border-blue-500 hover:drop-shadow-[0_35px_35px_rgba(0,0,0,0.25)]"
+            href="https://www.google.com/"
+            class="bg-white border py-2 px-5 w-50 rounded-xl flex justify-center items-center gap-2 text-[16px] hover:border-blue-500"
           >
             <img src="images/google.svg" alt="Google Logo" />
             Google
           </a>
           <a
-          href="https://www.facebook.com/"
-            class="bg-white border py-2 px-5 w-50 rounded-xl flex justify-center items-center gap-2 text-sm hover:border-blue-500 hover:drop-shadow-[0_35px_35px_rgba(0,0,0,0.25)]"
+            href="https://www.facebook.com/"
+            class="bg-white border py-2 px-5 w-50 rounded-xl flex justify-center items-center gap-2 text-[16px] hover:border-blue-500"
           >
             <img src="images/facebook.svg" alt="Facebook Logo" />
             Facebook
@@ -182,7 +189,7 @@
         >
           <p class="text-base">You have an account?</p>
           <a
-            href="http://127.0.0.1:5500/login.html"
+            href="/login.html"
             class="font-bold rounded-xl duration-300 text-[#5A8BF2] text-base"
           >
             Login
@@ -192,10 +199,10 @@
     </section>
 
     <script>
-      function handlePasswordOne() {
-        let passwordInput = document.getElementById("typeyourpassword");
-        let eyeOn = document.getElementById("eyeon");
-        let eyeOff = document.getElementById("eyeoff");
+      function handlePassword(inputId, eyeOnId, eyeOffId) {
+        let passwordInput = document.getElementById(inputId);
+        let eyeOn = document.getElementById(eyeOnId);
+        let eyeOff = document.getElementById(eyeOffId);
 
         if (passwordInput.type === "password") {
           passwordInput.type = "text";
@@ -205,21 +212,6 @@
           passwordInput.type = "password";
           eyeOn.style.display = "none";
           eyeOff.style.display = "block";
-        }
-      }
-      function handlePasswordTwo() {
-        let confirmPasswordInput = document.getElementById("confirm-password");
-        let confirmEyeOn = document.getElementById("confirmeyeon");
-        let confirmEyeOff = document.getElementById("confirmeyeoff");
-
-        if (confirmPasswordInput.type === "password") {
-          confirmPasswordInput.type = "text";
-          confirmEyeOn.style.display = "block";
-          confirmEyeOff.style.display = "none";
-        } else {
-          confirmPasswordInput.type = "password";
-          confirmEyeOn.style.display = "none";
-          confirmEyeOff.style.display = "block";
         }
       }
     </script>
